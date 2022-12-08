@@ -1,6 +1,40 @@
 h1{
  font-family: 'Times New Roman', Times, serif;
  text-align: center;
- 
+ color: #fff;
 }
 
+#a01{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+#a02{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+nav{
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
+    url(./../../../../img/norte.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+}
+
+img{
+
+    padding-top: 40px;
+    padding-left: 40px;
+    height: 225px;
+    width: 400px; 
+
+}
+
+footer{
+    background-color :#343a40;
+    color: white;
+    padding-bottom: 8%;
+    text-align: center;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75));
+}

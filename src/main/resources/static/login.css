@@ -1,0 +1,37 @@
+#footershet{
+    background-color :#343a40;
+    color: white;
+    padding-bottom: 8%;
+    text-align: center;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75))
+    
+}
+
+#n1{
+
+    text-align: left !important;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+#a1{
+    
+    color: white;
+}
+
+#cemail{
+   padding-right: 60%;
+}
+
+#cpass{
+   padding-right: 60%;
+}
+
+nav{
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url(./../../../../img/norte.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+}

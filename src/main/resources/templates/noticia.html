@@ -6,7 +6,6 @@ and open the template in the editor.
 -->
 <html xmlns:th="https://www.thymeleaf.org">
     <head>
-        <link rel="shortcut icon" href="../../../../img/R.ico">
         <title>Rosario News</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,7 @@ and open the template in the editor.
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
-            <button><a href="index.html">Inicio</a></button>
+            <button><a href="/">Inicio</a></button>
         </nav>
 
         <header>
@@ -31,6 +30,9 @@ and open the template in the editor.
               </div>
               <div>
                 <input type="text" class="form-group" name="cuerpo" placeholder="Ingresar cuerpo">
+              </div>
+              <div>
+                <input type="text" class="form-group" name="foto" placeholder="Ingresar url de una imagen">
               </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
             </form>

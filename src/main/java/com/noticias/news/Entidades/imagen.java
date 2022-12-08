@@ -5,19 +5,28 @@
  */
 package com.noticias.news.Entidades;
 
-import java.util.function.Function;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Noticia {
-    
+public class imagen {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2" )
     private String id;
+    
+    @Lob @Basic(fetch = FetchType.LAZY)
+    private byte[] contenido;
+    private String nombre;
+    private String mime;
+
+    public imagen() {
+    }
 
     public String getId() {
         return id;
@@ -26,40 +35,30 @@ public class Noticia {
     public void setId(String id) {
         this.id = id;
     }
+
+    public byte[] getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(byte[] contenido) {
+        this.contenido = contenido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getMime() {
+        return mime;
+    }
+
+    public void setMime(String mime) {
+        this.mime = mime;
+    }
     
-    private String titulo;
-    private String cuerpo;
-    private String foto;
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
     
-    
-    
-    public Noticia() {
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getCuerpo() {
-        return cuerpo;
-    }
-
-    public void setCuerpo(String cuerpo) {
-        this.cuerpo = cuerpo;
-    }
-      
-      
-      
 }

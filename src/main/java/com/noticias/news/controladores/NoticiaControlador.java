@@ -34,10 +34,10 @@ public class NoticiaControlador {
     }
 
     @PostMapping("/ingresar")
-    public String registro(@RequestParam(required = false) String titulo, @RequestParam(required = false) String cuerpo, ModelMap modelo) {
+    public String registro(@RequestParam(required = false) String titulo, @RequestParam(required = false) String cuerpo, @RequestParam(required = false) String foto, ModelMap modelo) {
 
         try {
-            NoticiaService.CrearNoticia(titulo, cuerpo);
+            NoticiaService.CrearNoticia(titulo, cuerpo, foto);
             modelo.put("Exito", "La noticia fue cargada con exito.");
         } catch (MiException ex) {
             modelo.put("Error", ex.getMessage());
@@ -58,7 +58,27 @@ public class NoticiaControlador {
     
     @GetMapping("/modificar/{id}")//localhost:8080/noticia/modificar
     public String modificar(@PathVariable String id, ModelMap modelo){
-    modelo.put("noticia", NoticiaService.GetOne(id));
+    modelo.put("noticia", NoticiaService.getOne(id));
+    
     return "modificar.html";
     }
+    
+    @PostMapping("/modificar/{id}")
+    public String modificar(@PathVariable String id, String titulo, String cuerpo,String foto, ModelMap modelo) {
+        try {
+            List<Noticia> noticias = NoticiaService.listarNoticia();
+            
+            modelo.addAttribute("noticia", noticias);
+            NoticiaService.ModificarNoticia(id,titulo, cuerpo, foto);
+                                   
+            return "redirect:../lista";
+
+        } catch (MiException ex) {
+
+            modelo.put("error", ex.getMessage());
+            
+            return "modificar.html";
+        }
+    }
+
 }

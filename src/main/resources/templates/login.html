@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head xmlns:th="https://www.thymeleaf.org">
+        <link rel="shortcut icon" href="../../../../img/RYN2.jpg">
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="login.css" >
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <img src="../../../../img/RYN2.jpg" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-text-top">
+                
+            <h3 id="n1" >Ingresar Usuario</h3>
+            <a id="a1"  href="/">Volver al inicio</a>
+        </nav>
+        
+        <form clas="formulario" th:action="@{/logincheck}" method="POST" style="padding: 10%;" >
+
+            <div  class="form-group my-3">
+                <h3 class="card-title" style="font-family: 'Times New Roman', Times, serif;">Ingresa a tu portal de noticias!</h3>
+            </div>
+            
+            <div id="cemail" class="form-group my-3">
+                <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+            
+            <div id="cpass" class="form-group my-3">
+                <input type="password" class="form-control" name="password"  placeholder="Contrasenia">
+            </div>
+            
+            <button name="botonenv" style="color: black; background-color: #5669FC ; border-radius: 5%; border-color: #5669FC;" type="submit">Ingresar</button>
+        </form>
+
+
+        <footer id="footershet">
+            Copirygth 2022 ©.
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    </body>
+</html>

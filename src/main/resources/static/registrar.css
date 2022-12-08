@@ -1,0 +1,60 @@
+form{
+    padding: 20px 300px 20px 10px;
+    padding-left: 300px;
+    padding-top: 60px;
+}
+
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+}
+
+nav{
+    background-image: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
+    url(./../../../../img/norte.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+}
+
+#in01{
+padding-bottom: 20px;
+} 
+
+#in02{
+    padding-bottom: 20px;
+}
+
+#in03{
+    padding-bottom: 20px;
+}
+
+#in04{
+    padding-bottom: 20px;
+}
+
+#in05{
+    padding-bottom: 20px;
+}
+
+#bt01{
+    padding-bottom: 20px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #fff;
+   }
+
+button{
+    color: black;
+    background-color: #5669FC ; 
+    border-radius: 5%;
+    border-color: #5669FC;
+}
+
+#bk{
+   padding-left: 300px;
+}
